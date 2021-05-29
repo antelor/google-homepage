@@ -2,6 +2,14 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style>
+    :root {  
+        box-sizing: border-box;
+    }
+    
+    *,::before,
+    ::after {  
+        box-sizing: inherit;
+    }
     ul {
         display:flex;
         list-style-type: none;
@@ -47,6 +55,16 @@
         padding:10px;
     }
 
+    #signinbtn{
+        background-color: #2c73bf;
+        color: white;
+    }
+
+    .content {
+        position: relative;
+        top:-90px;
+    }
+
     img {
         display: flex;
         margin: 15% auto 2em;
@@ -74,7 +92,7 @@
         border-radius: 24px;
         height: 44px;
         margin: 0 auto;
-        width: 482px;
+        width: 60%;
     }
 
     #googlesearch {
@@ -83,8 +101,21 @@
     }
     
     .gbuttons {
-        width:50%;
-        margin: auto;
+        width: 25%;
+        height: 3em;
+        background-color:#e8e6e1;
+        text-decoration: none;
+        border:0;
+        padding: 0;
+    }
+
+    #gsearch{
+        margin-left: 70%;
+    }
+
+    #glucky{
+        position:relative;
+
     }
 
     footer {
@@ -94,7 +125,11 @@
         width:100%;
         padding:20px;
         font-size:small;
-        background-color:lightgray;
+        background-color:#e8e6e1;
+    }
+
+    footer a {
+        color: #63615c;
     }
 
 </style>
@@ -107,19 +142,21 @@
     <nav id="navright"> 
             <a href="#">Gmail</a>
             <a href="#">Images</a>
-            <a href="#"><span class="material-icons">apps</span></a>
-            <a href="#">Sign In</a>
+            <a href="#"><span class="material-icons" style="position:relative; top:6px;">apps</span></a>
+            <a href="#" id="signinbtn">Sign In</a>
     </nav>
 
-    <img id="glogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
-    <div id="searchform">
-        <span id="gform">
-            <div class="hsuHs" style="height: 21px; width: 21px; position:relative; left:-17px; top:12px; opacity:0.3;"><span class="wFncld z1asCe MZy1Rb"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span></div>
-            <input type="text" id="googlesearch">
-        </span>
-       
-        <input type="submit" value="Google Search" class="gbuttons">
-        <input type="submit" value="I'm Feeling Lucky" class="gbuttons">
+    <div class="content">
+        <img id="glogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
+        <div id="searchform">
+            <span id="gform">
+                <div class="hsuHs" style="height: 21px; width: 21px; position:relative; left:-17px; top:12px; opacity:0.3;"><span class="wFncld z1asCe MZy1Rb"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span></div>
+                <input type="text" id="googlesearch">
+            </span>
+        
+            <input type="submit" value="Google Search" class="gbuttons" id="gsearch">
+            <input type="submit" value="I'm Feeling Lucky" class="gbuttons" id="glucky">
+        </div>
     </div>
 
     <footer>
